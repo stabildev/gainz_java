@@ -80,8 +80,9 @@
             android:title="@string/pref_recreate_dummy_data"/>
 
         <Preference
-            android:key="@string/pref_key_export_database"
-            android:title="@string/pref_export_database"/>
+            android:key="@string/pref_key_clear_database"
+            android:title="@string/pref_clear_database"
+            android:summary="@string/pref_clear_database_summary"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

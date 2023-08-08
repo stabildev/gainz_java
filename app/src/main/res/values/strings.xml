@@ -182,9 +182,11 @@
     <string name="pref_cleanup_exercises_summary">Delete unused exercises from database</string>
     <string name="pref_cleanup_exercises_done">Cleaned up exercises</string>
 
-    <string name="pref_key_export_database" translatable="false">export_database</string>
-    <string name="pref_export_database">Export database</string>
-    <string name="pref_export_database_done">Cleared database</string>
+    <string name="pref_key_clear_database" translatable="false">clear_database</string>
+    <string name="pref_clear_database">Clear database</string>
+    <string name="pref_clear_database_summary">Delete ALL data in database</string>
+    <string name="pref_clear_database_dialog">Do you really want to delete all data in the database?</string>
+    <string name="pref_clear_database_done">Cleared database</string>
 
     <string name="pref_key_recreate_dummy_data" translatable="false">recreate_dummy_data</string>
     <string name="pref_recreate_dummy_data">Recreate dummy data</string>

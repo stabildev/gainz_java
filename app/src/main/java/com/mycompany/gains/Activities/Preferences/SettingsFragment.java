@@ -47,11 +47,21 @@ public class SettingsFragment extends PreferenceFragment {
             }
         });
 
-        findPreference(getString(R.string.pref_key_export_database)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        findPreference(getString(R.string.pref_key_clear_database)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                if (DatabaseHelper.getInstance(getActivity()).exportDatabase("gains_db_backup"))
-                    Toast.makeText(getActivity(), R.string.pref_export_database_done, Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setMessage(getString(R.string.pref_clear_database_dialog))
+                        .setPositiveButton(getString(R.string.dialog_yes), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                DatabaseHelper db = DatabaseHelper.getInstance(getActivity());
+                                db.onUpgrade(db.getWritableDatabase(), 1, 1);
+                                Toast.makeText(getActivity(), getString(R.string.pref_clear_database_done), Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setNegativeButton(getString(R.string.dialog_cancel), null)
+                        .show();
                 return true;
             }
         });

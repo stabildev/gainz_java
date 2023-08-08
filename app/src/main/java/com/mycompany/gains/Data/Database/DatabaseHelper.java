@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,10 +19,6 @@ import com.mycompany.gains.Data.Model.Workout;
 import com.mycompany.gains.R;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.channels.FileChannel;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -180,26 +175,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static boolean doesDatabaseExist(Context context) {
         File dbFile = context.getDatabasePath(DATABASE_NAME);
         return dbFile.exists();
-    }
-
-    public static boolean exportDatabase(String backupName){
-        File sd = Environment.getExternalStorageDirectory();
-        File data = Environment.getDataDirectory();
-        FileChannel source, destination;
-        String currentDBPath = "/data/com.mycompany.gains/databases/" + DATABASE_NAME;
-        File currentDB = new File(data, currentDBPath);
-        File backupDB = new File(sd, backupName);
-        try {
-            source = new FileInputStream(currentDB).getChannel();
-            destination = new FileOutputStream(backupDB).getChannel();
-            destination.transferFrom(source, 0, source.size());
-            source.close();
-            destination.close();
-            return true;
-        } catch(IOException e) {
-            e.printStackTrace();
-            return false;
-        }
     }
 
     public static String dateToString(Calendar calendar) {

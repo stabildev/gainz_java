@@ -42,7 +42,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DatabaseHelper.exportDatabase("gains_db_backup");
         db = DatabaseHelper.getInstance(this);
     }
 
