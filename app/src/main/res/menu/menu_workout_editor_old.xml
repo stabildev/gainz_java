@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mycompany.gains.Activities.WorkoutEditorOld.WorkoutEditorOld">
+
+    <item android:id="@+id/action_pause_workout" android:title="@string/action_resume_workout"
+        android:icon="@drawable/ic_play_arrow_white_24dp"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_add_exercise" android:title="@string/action_add_exercise"
+        android:icon="@drawable/ic_playlist_add_white_24dp"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_end_workout" android:title="@string/action_end_workout"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_mark_as_routine" android:title="@string/action_save_as_routine"
+        android:checkable="true" app:showAsAction="never" />
+
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+</menu>

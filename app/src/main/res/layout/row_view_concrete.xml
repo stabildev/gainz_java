@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mycompany.gains.widgets.RowView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/content_margin"
+    android:paddingBottom="@dimen/content_margin"
+    android:paddingLeft="@dimen/edge_margin"
+    android:paddingRight="@dimen/content_margin"
+    android:gravity="center_vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@drawable/list_item_selector" />

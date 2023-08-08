@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_general"
+        android:key="pref_general">
+
+        <Preference
+            android:key="@string/pref_key_cleanup_exercises"
+            android:title="@string/pref_cleanup_exercises"
+            android:summary="@string/pref_cleanup_exercises_summary"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_timing"
+        android:key="pref_timing">
+
+        <CheckBoxPreference
+            android:key="@string/pref_key_enable_timer"
+            android:title="@string/pref_enable_timer"
+            android:summary="@string/pref_enable_timer_summary"
+            android:defaultValue="true" />
+
+        <EditTextPreference
+            android:key="@string/pref_key_timer_max"
+            android:defaultValue="5"
+            android:dialogTitle="@string/pref_timer_max"
+            android:inputType="number"
+            android:summary="@string/pref_timer_max_summary"
+            android:title="@string/pref_timer_max" />
+
+        <EditTextPreference
+            android:key="@string/pref_key_rest_increment"
+            android:defaultValue="15"
+            android:dialogTitle="@string/pref_rest_increment"
+            android:inputType="number"
+            android:title="@string/pref_rest_increment" />
+
+        <CheckBoxPreference
+            android:key="@string/pref_key_auto_skip"
+            android:title="@string/pref_auto_skip"
+            android:defaultValue="true" />
+
+        <RingtonePreference
+            android:key="@string/pref_key_alarm_sound"
+            android:title="@string/pref_alarm_sound"
+            android:ringtoneType="notification"
+            android:showSilent="true"
+            android:showDefault="false"
+            android:summary="@string/pref_alarm_sound_summary"
+            android:defaultValue=""/>
+
+        <RingtonePreference
+            android:key="@string/pref_key_acustic_countdown"
+            android:title="@string/pref_acustic_countdown"
+            android:ringtoneType="notification"
+            android:showSilent="true"
+            android:showDefault="false"
+            android:defaultValue=""/>
+
+        <CheckBoxPreference
+            android:key="@string/pref_key_vibrate_countdown"
+            android:title="@string/pref_vibrate_countdown"
+            android:defaultValue="true" />
+
+        <EditTextPreference
+            android:key="@string/pref_key_beep"
+            android:defaultValue="3"
+            android:dialogTitle="@string/pref_beep"
+            android:inputType="number"
+            android:title="@string/pref_beep" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_developer"
+        android:key="pref_developer">
+
+        <Preference
+            android:key="@string/pref_key_recreate_dummy_data"
+            android:title="@string/pref_recreate_dummy_data"/>
+
+        <Preference
+            android:key="@string/pref_key_export_database"
+            android:title="@string/pref_export_database"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,101 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mycompany.gains.Activities.WorkoutEditorOld.WorkoutEditorOld"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <ProgressBar
+            android:id="@+id/workout_progress"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:progressDrawable="@drawable/progress"
+            android:elevation="4dp" />
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="-5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardElevation="2dp"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/silver"
+            card_view:cardCornerRadius="0dp"
+            card_view:cardElevation="4dp">
+
+            <com.mycompany.gains.widgets.SetEditorViewPager
+                android:id="@+id/set_editor_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="@dimen/edge_margin"
+        android:translationY="-90dp">
+
+        <ImageView
+            android:id="@+id/arrow_left"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="-8dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_chevron_left_black_48dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:tint="@color/icons"
+            android:onClick="onLeftButtonClick"/>
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="-8dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_chevron_right_black_48dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:tint="@color/icons"
+            android:onClick="onRightButtonClick"/>
+    </LinearLayout>
+
+    <com.mycompany.gains.widgets.TimerView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"/>
+</FrameLayout>

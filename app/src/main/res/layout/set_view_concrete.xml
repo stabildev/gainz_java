@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mycompany.gains.widgets.SetView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="16dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:gravity="center"
+    android:minWidth="32dp"
+    android:background="@drawable/bg_set_undone"
+    android:textColor="@color/divider" />

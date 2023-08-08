@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="row">
+        <attr name="state_dragging" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="RestView">
+        <attr name="tint" format="reference|color" />
+    </declare-styleable>
+</resources>

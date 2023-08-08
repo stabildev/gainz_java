@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/content_margin"
+    android:paddingBottom="@dimen/content_margin"
+    android:paddingLeft="@dimen/edge_margin"
+    android:paddingRight="@dimen/content_margin"
+    android:gravity="center_vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@drawable/list_item_selector">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/content_margin"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        android:textColor="@color/primary_text"
+        android:textStyle="normal"
+        android:text="Title" />
+
+    <com.mycompany.gains.widgets.RestView
+        android:id="@+id/rest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/content_margin"
+        android:layout_alignParentRight="true" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:paddingTop="@dimen/content_margin"
+        android:layout_alignParentLeft="true"
+        android:scrollbars="none"
+        android:requiresFadingEdge="horizontal"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="@dimen/content_margin">
+
+        <LinearLayout
+            android:id="@+id/sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="false"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/set_add"
+                layout="@layout/set_view_add"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ViewFlipper
+        android:id="@+id/note_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/edge_margin"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/scroll_view"
+        android:visibility="gone"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/content_margin"
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text" />
+
+        <com.mycompany.gains.widgets.NoAutoFocusEditText
+            android:id="@+id/note_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/content_margin"
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text"
+            android:hint="@string/action_add_note"
+            android:background="@android:color/transparent"/>
+    </ViewFlipper>
+
+    <LinearLayout
+        android:id="@+id/move_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <ImageView android:id="@+id/down_btn"
+            android:layout_height="25dp"
+            android:layout_width="25dp"
+            android:scaleType="fitCenter"
+            android:paddingRight="4dp"
+            android:src="@drawable/ic_down_circle_outline_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:tint="@color/icons"
+            android:focusable="true"
+            android:clickable="true" />
+
+        <ImageView android:id="@+id/up_btn"
+            android:layout_height="25dp"
+            android:layout_width="25dp"
+            android:scaleType="fitCenter"
+            android:paddingLeft="4dp"
+            android:src="@drawable/ic_up_circle_outline_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:tint="@color/icons"
+            android:focusable="true"
+            android:clickable="true" />
+    </LinearLayout>
+</RelativeLayout>

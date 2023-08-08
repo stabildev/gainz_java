@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/content_margin"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        android:textColor="@color/primary_text"
+        android:textStyle="normal"
+        android:text="Title" />
+
+    <com.mycompany.gains.widgets.RestView
+        android:id="@+id/rest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/content_margin"
+        android:layout_alignParentRight="true" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:paddingTop="@dimen/content_margin"
+        android:layout_alignParentLeft="true"
+        android:scrollbars="none"
+        android:requiresFadingEdge="horizontal"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="@dimen/content_margin">
+
+        <LinearLayout
+            android:id="@+id/sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="false"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/set_add"
+                layout="@layout/set_view_add"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ViewFlipper
+        android:id="@+id/note_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/edge_margin"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/scroll_view"
+        android:visibility="gone"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/content_margin"
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text" />
+
+        <com.mycompany.gains.widgets.NoAutoFocusEditText
+            android:id="@+id/note_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/content_margin"
+            android:textSize="@dimen/abc_text_size_caption_material"
+            android:textColor="@color/secondary_text"
+            android:hint="@string/action_add_note"
+            android:background="@android:color/transparent"/>
+    </ViewFlipper>
+
+    <ImageView android:id="@+id/ic_more"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:paddingTop="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_more_vert_black_24dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:tint="@color/secondary_text"
+        android:background="?attr/selectableItemBackground"
+        android:visibility="gone"/>
+</merge>

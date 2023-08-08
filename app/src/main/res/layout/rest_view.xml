@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ic_timer"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_timer_white_24dp"
+        android:tint="@color/disabled_text"
+        android:layout_gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:textColor="@color/disabled_text"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:text="0:00"
+        android:layout_gravity="center_vertical"/>
+
+</merge>

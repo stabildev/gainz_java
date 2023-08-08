@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mycompany.gainz.Fragments.HistoryListFragment">
+    tools:context="com.mycompany.gains.Activities.MainActivity.fragments.HistoryListFragment">
 
-    <com.mycompany.gainz.Classes.EmptyRecyclerView
+    <com.mycompany.gains.widgets.EmptyRecyclerView
         android:id="@+id/routineList"
         android:scrollbars="vertical"
         android:layout_width="match_parent"

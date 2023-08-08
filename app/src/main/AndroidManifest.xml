@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mycompany.gainz" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mycompany.gains" >
+
+    <uses-sdk tools:overrideLibrary="com.wnafee.vector" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -8,8 +14,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Activities.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.mycompany.gains.Activities.MainActivity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/launcher_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,21 +24,44 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.WorkoutEditor"
+            android:name="com.mycompany.gains.Activities.WorkoutEditorOld.WorkoutEditorOld"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_workout"
-            android:parentActivityName=".Activities.MainActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.mycompany.gains.Activities.MainActivity.MainActivity"
             android:windowSoftInputMode="stateUnchanged" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mycompany.gainz.Activities.MainActivity" />
+                android:value="com.mycompany.gains.Activities.MainActivity.MainActivity" />
         </activity>
         <activity
-            android:name=".Activities.WorkoutViewer"
-            android:label="@string/title_activity_workout_view"
-            android:parentActivityName=".Activities.MainActivity" >
+            android:name="com.mycompany.gains.Activities.WorkoutEditor.WorkoutEditor"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_workout"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.mycompany.gains.Activities.MainActivity.MainActivity"
+            android:windowSoftInputMode="stateUnchanged" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mycompany.gainz.Activities.MainActivity" />
+                android:value="com.mycompany.gains.Activities.MainActivity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.mycompany.gains.Activities.Preferences.SettingsActivity"
+            android:parentActivityName="com.mycompany.gains.Activities.MainActivity.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.gains.Activities.MainActivity.MainActivity" />
+        </activity>
+
+        <service android:name="com.mycompany.gains.Activities.WorkoutEditor.CountdownNotifyService" />
+
+        <receiver android:name="com.mycompany.gains.Activities.WorkoutEditor.AlarmReceiver" />
+
+        <activity android:name="com.mycompany.gains.Activities.WorkoutViewer"
+            android:parentActivityName="com.mycompany.gains.Activities.MainActivity.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.gains.Activities.MainActivity.MainActivity" />
         </activity>
     </application>
 

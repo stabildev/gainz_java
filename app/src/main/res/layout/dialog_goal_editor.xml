@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/material_dialog_min_width"
+    android:padding="@dimen/content_margin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/arrow_left"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="-12dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitStart"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_chevron_left_black_48dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:tint="@color/icons"
+            android:layout_gravity="center_vertical"/>
+
+        <TextSwitcher
+            android:id="@+id/exercise_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/arrow_left"
+            android:layout_toLeftOf="@+id/arrow_right"
+            android:layout_gravity="center"
+            android:inAnimation="@anim/abc_fade_in"
+            android:outAnimation="@anim/abc_fade_out"
+            android:measureAllChildren="false"/>
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="-12dp"
+            android:scaleType="fitEnd"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_chevron_right_black_48dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:tint="@color/icons"
+            android:layout_gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="@dimen/content_margin"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        android:textColor="@color/secondary_text"
+        android:text="@string/dialog_goal_editor_message"/>
+
+    <com.mycompany.gains.widgets.WrapContentViewPager
+        android:id="@+id/goal_editor_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="0dp"/>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/content_margin"
+        android:layout_gravity="right">
+
+        <Button
+            android:id="@+id/negative_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:minWidth="0dp"
+            android:text="@string/dialog_goal_editor_dont_set_goals"/>
+        <Button
+            android:id="@+id/positive_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:minWidth="0dp"
+            android:text="@string/dialog_next"/>
+
+    </LinearLayout>
+
+</LinearLayout>

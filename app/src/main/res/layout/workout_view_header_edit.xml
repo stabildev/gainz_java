@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/edge_margin"
+    android:paddingRight="@dimen/edge_margin"
+    android:paddingTop="24dp"
+    android:paddingBottom="@dimen/edge_margin"
+    android:clipToPadding="true">
+
+    <com.mycompany.gains.widgets.NoAutoFocusEditText
+        android:id="@+id/workout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:textColor="@color/primary_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/workout_date"
+        android:inputType="textNoSuggestions"
+        android:hint="@string/unnamed_workout"
+        android:background="@android:color/transparent" />
+
+    <com.mycompany.gains.widgets.NoAutoFocusEditText
+        android:id="@+id/workout_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:textColor="@color/secondary_text"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/workout_date"
+        android:layout_below="@+id/workout_title"
+        android:hint="@string/action_add_note"
+        android:inputType="textNoSuggestions"
+        android:paddingBottom="@dimen/edge_margin"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/workout_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:textColor="@color/secondary_text"
+        android:gravity="right"
+        android:layout_alignBaseline="@+id/workout_title"
+        android:layout_alignParentRight="true"
+
+        android:text="Date"/>
+
+</RelativeLayout>

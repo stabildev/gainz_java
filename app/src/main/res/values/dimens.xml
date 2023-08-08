@@ -11,4 +11,14 @@
     <dimen name="recycler_item_bottom_margin">16dp</dimen>
 
     <dimen name="list_divider_thickness">.25dp</dimen>
+
+    <dimen name="list_item_translation_z">2dp</dimen>
+
+    <dimen name="set_view_stroke_width">0.5dp</dimen>
+    <dimen name="set_view_stroke_width_add">0.5dp</dimen>
+
+    <dimen name="row_list_single_height">48dp</dimen>
+    <dimen name="row_list_sub_height">40dp</dimen>
+
+    <dimen name="material_dialog_min_width">280dp</dimen>
 </resources>

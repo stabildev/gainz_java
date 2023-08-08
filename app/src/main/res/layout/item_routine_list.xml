@@ -9,23 +9,52 @@
     android:background="@drawable/list_item_selector"
     android:drawSelectorOnTop="true">
 
-    <TextView android:id="@+id/item_routineList_name"
+    <TextView android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/star"
         android:textSize="16sp"
         android:textColor="@color/primary_text"
         android:textStyle="normal"
         android:text="Title" />
 
+    <TextView android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/edge_margin"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/star"
+        android:layout_below="@+id/name"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:textStyle="normal"
+        android:textColor="@color/secondary_text"
+        android:visibility="gone"
+        android:text="Note" />
+
+    <CheckBox
+        android:id="@+id/star"
+        style="?android:attr/starStyle"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/edge_margin"
+        android:paddingTop="@dimen/edge_margin"
+        android:paddingBottom="@dimen/edge_margin"
+        android:layout_centerVertical="true"
+        android:checked="false"
+        android:visibility="gone"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="0.25dp"
+        android:layout_marginTop="16dp"
         android:background="@color/divider"
-        android:layout_below="@+id/item_routineList_name" />
+        android:layout_below="@+id/note" />
 
 
 </RelativeLayout>

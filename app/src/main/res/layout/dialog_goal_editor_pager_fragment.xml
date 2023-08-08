@@ -1,0 +1,159 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal">
+
+    <!-- SETS -->
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_body_1_material"
+            android:textColor="@color/primary_text"
+            android:text="@string/sets" />
+
+        <EditText android:id="@+id/sets"
+            android:inputType="number"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_weight="1"/>
+
+        <ImageView android:id="@+id/sets_down"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_remove_square_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true" />
+
+        <ImageView android:id="@+id/sets_up"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_add_square_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true" />
+    </TableRow>
+
+    <!-- REPS -->
+    <TableRow
+        android:paddingTop="@dimen/content_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_body_1_material"
+            android:textColor="@color/primary_text"
+            android:text="@string/reps" />
+
+        <EditText android:id="@+id/reps"
+            android:inputType="number"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_weight="1"/>
+
+        <ImageView android:id="@+id/reps_down"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_remove_square_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true" />
+
+        <ImageView android:id="@+id/reps_up"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_add_square_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true" />
+    </TableRow>
+
+    <!-- WEIGHT -->
+    <TableRow
+        android:paddingTop="@dimen/content_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_body_1_material"
+            android:textColor="@color/primary_text"
+            android:text="@string/weight" />
+
+        <EditText android:id="@+id/weight"
+            android:inputType="numberDecimal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_weight="1"/>
+
+        <ImageView android:id="@+id/weight_down"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_remove_square_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true" />
+
+        <ImageView android:id="@+id/weight_up"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_add_square_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true" />
+    </TableRow>
+
+    <!-- REST -->
+    <TableRow
+        android:paddingTop="@dimen/content_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/abc_text_size_body_1_material"
+            android:textColor="@color/primary_text"
+            android:text="@string/rest" />
+
+        <EditText android:id="@+id/rest"
+            android:inputType="number"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_weight="1"/>
+
+        <ImageView android:id="@+id/rest_down"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_remove_square_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true" />
+
+        <ImageView android:id="@+id/rest_up"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_add_square_black"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true" />
+    </TableRow>
+
+</TableLayout>

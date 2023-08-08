@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#003060</color>
-    <color name="primary_dark">#001d3a</color>
-    <color name="primary_light">#5045688b</color>
-    <color name="accent">#d50000</color>
+
+    <color name="primary">#212121</color> <!-- black 900 -->
+    <color name="primary_dark">#000</color> <!-- black -->
+    <color name="primary_light">#E0E0E0</color> <!-- black 300 -->
+    <color name="primary_very_light">#50E0E0E0</color> <!-- 50 += 300 -->
+
+    <color name="accent">#F44336</color>
+    <color name="accent_pressed">#DC3C31</color> <!-- one shade darker -->
+    <color name="accent_light">#FAA19A</color> <!-- five shades lighter -->
+
+    <color name="accent2">#F44336</color>
+
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
+
     <color name="icons">#727272</color>
     <color name="divider">#80B6B6B6</color>
+    <color name="divider_cards">#50B6B6B6</color>
 
-    <color name="item_pressed">#30B6B6B6</color>
+    <color name="disabled_text">#AAA</color>
+
+    <color name="set_view_undone">#99B6B6B6</color>
+
+    <color name="item_pressed">#30E0E0E0</color>
 
     <color name="white">#FFFFFF</color>
+    <color name="white_disabled">#80FFFFFF</color>
+    <color name="white_pressed">#eee</color>
     <color name="silver">#F5F5F5</color>
 
     <color name="tab_active">#FFFFFF</color>

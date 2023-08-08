@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.mycompany.gains.Activities.WorkoutEditorOld.fragments.SetEditorFragment"
+    android:paddingLeft="@dimen/edge_margin"
+    android:paddingRight="@dimen/edge_margin"
+    android:paddingTop="@dimen/content_margin"
+    android:paddingBottom="@dimen/edge_margin">
+
+    <!-- DIVIDER -->
+
+    <com.mycompany.gains.widgets.NoAutoFocusEditText
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/content_margin"
+        android:paddingTop="@dimen/content_margin"
+        android:background="@android:color/transparent"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        android:textColor="@color/disabled_text"
+        android:textColorHint="@color/disabled_text"
+        android:hint="@string/action_add_note"
+        android:inputType="textNoSuggestions|textMultiLine"/>
+
+
+    <TableLayout
+        android:id="@+id/edit_area"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/note"
+        android:layout_marginRight="88dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_body_1_material"
+                android:textColor="@color/primary_text"
+                android:text="@string/reps" />
+
+            <EditText android:id="@+id/reps"
+                android:inputType="number"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/content_margin"/>
+
+            <ImageView android:id="@+id/reps_down"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_remove_square_black"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true" />
+
+            <ImageView android:id="@+id/reps_up"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_square_black"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true" />
+
+        </TableRow>
+        <TableRow
+            android:paddingTop="@dimen/content_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_body_1_material"
+                android:textColor="@color/primary_text"
+                android:text="@string/weight" />
+
+            <EditText android:id="@+id/weight"
+                android:inputType="numberDecimal"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/content_margin"/>
+
+            <ImageView android:id="@+id/weight_down"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_remove_square_black"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true" />
+
+            <ImageView android:id="@+id/weight_up"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_square_black"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/note"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone">
+
+        <ImageView android:id="@+id/ic_more"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_more_vert_black_24dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:tint="@color/icons" />
+    </LinearLayout>
+
+</RelativeLayout>
