@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@drawable/list_item_selector">
+
+    <TextView android:id="@+id/item_historyList_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/edge_margin"
+        android:paddingLeft="@dimen/edge_margin"
+        android:paddingRight="@dimen/edge_margin"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        android:textColor="@color/primary_text"
+        android:textStyle="normal"
+        android:text="Title" />
+
+    <TextView android:id="@+id/item_historyList_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_historyList_name"
+        android:layout_alignParentRight="true"
+        android:paddingTop="@dimen/edge_margin"
+        android:paddingRight="@dimen/edge_margin"
+        android:textSize="@dimen/abc_text_size_caption_material"
+        android:textColor="@color/secondary_text"
+        android:text="Date" />
+
+    <TextView android:id="@+id/item_historyList_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/edge_margin"
+        android:layout_alignLeft="@+id/item_historyList_name"
+        android:layout_below="@+id/item_historyList_name"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:textStyle="normal"
+        android:textColor="@color/secondary_text"
+        android:visibility="gone"
+        android:text="Note" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_marginTop="@dimen/edge_margin"
+        android:background="@color/divider"
+        android:layout_below="@+id/item_historyList_note" />
+
+
+</RelativeLayout>

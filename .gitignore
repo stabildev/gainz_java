@@ -1,0 +1,27 @@
+# Gradle build outputs and intermediate files
+build/
+*.apk
+*.ap_
+.gradle/
+build-cache/
+
+# IDE specific files (example for Android Studio)
+/local.properties
+/.idea/
+/.gradle/
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/.iml
+
+# Android specific files and directories
+app/build/
+/captures
+
+# Libraries and dependencies
+app/libs/guava-18.0.jar
+
+# Miscellaneous
+*.log
+*.swp
+*.tmp

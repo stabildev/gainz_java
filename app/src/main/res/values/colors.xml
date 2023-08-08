@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#003060</color>
+    <color name="primary_dark">#001d3a</color>
+    <color name="primary_light">#5045688b</color>
+    <color name="accent">#d50000</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#727272</color>
+    <color name="divider">#80B6B6B6</color>
+
+    <color name="item_pressed">#30B6B6B6</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="silver">#F5F5F5</color>
+
+    <color name="tab_active">#FFFFFF</color>
+    <color name="tab_inactive">#B3FFFFFF</color>
+</resources>

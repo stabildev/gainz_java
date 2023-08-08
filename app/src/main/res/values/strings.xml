@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">#Gainz</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+
+    <string name="action_add_exercise">Add exercise</string>
+    <string name="action_add_note">Add note</string>
+    <string name="action_pause_workout">Pause workout</string>
+    <string name="action_resume_workout">Resume workout</string>
+
+    <string name="action_newfrom_routines">New workout from routines</string>
+    <string name="action_newfrom_workouts">Duplicate workout</string>
+
+    <string name="action_delete_set">Delete Set</string>
+    <string name="action_skip_set">Skip Set</string>
+
+    <string name="tab_start">START</string>
+    <string name="tab_workouts">WORKOUTS</string>
+    <string name="tab_routines">ROUTINES</string>
+
+    <string name="no_workouts">No workout yet.\nStart your first workout today!</string>
+    <string name="no_routines">No routine yet.\nCreate your first routine!</string>
+    <string name="workoutList_empty">Empty workout.\nAdd an exercise to start!</string>
+
+    <string name="no_exercise">No Exercise</string>
+    
+    <string name="dialog_addworkout_title">Select a routine</string>
+    <string name="dialog_addworkout_text">You can add one or more routines to your workout or create a new one.</string>
+    <string name="dialog_addworkout_newworkout">NEW WORKOUT</string>
+
+    <string name="dialog_addexercise_title">Select an exercise</string>
+    <string name="dialog_addexercise_ok">Add to workout</string>
+
+    <string name="dialog_cancel">Cancel</string>
+    <string name="title_activity_workout">WorkoutActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="new_workout_title">New Workout</string>
+    <string name="edit_workout_title">Edit Workout</string>
+    <string name="edit_routine_title">Edit Routine</string>
+
+    <string name="workout_details_title">Workout Details</string>
+
+    <string name="set">Set</string>
+    <string name="reps">Reps</string>
+    <string name="weight">Weight</string>
+    <string name="rest">Rest</string>
+
+    <string name="unnamed_workout">Unnamed Workout</string>
+    <string name="unnamed_routine">Unnamed Routine</string>
+
+    <string name="title_activity_workout_view">WorkoutView</string>
+    
+</resources>

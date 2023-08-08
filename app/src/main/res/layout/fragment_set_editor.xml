@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.mycompany.gainz.Fragments.SetEditorFragment"
+    android:paddingLeft="@dimen/edge_margin"
+    android:paddingRight="@dimen/edge_margin"
+    android:paddingTop="@dimen/content_margin"
+    android:paddingBottom="@dimen/edge_margin">
+
+    <!-- DIVIDER -->
+
+    <TableLayout
+        android:id="@+id/setEditor_editArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/content_margin"
+
+        android:layout_marginRight="88dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_body_1_material"
+                android:textColor="@color/primary_text"
+                android:text="@string/reps" />
+
+            <EditText android:id="@+id/setEditor_reps"
+                android:inputType="number"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/content_margin"/>
+
+            <ImageView android:id="@+id/setEditor_repsDown"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_remove_circle_black_24dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:tint="@color/icons" />
+
+            <ImageView android:id="@+id/setEditor_repsUp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_circle_black_24dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:tint="@color/icons" />
+
+        </TableRow>
+        <TableRow
+            android:paddingTop="@dimen/content_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_body_1_material"
+                android:textColor="@color/primary_text"
+                android:text="@string/weight" />
+
+            <EditText android:id="@+id/setEditor_weight"
+                android:inputType="numberDecimal"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/content_margin"/>
+
+            <ImageView android:id="@+id/setEditor_weightDown"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_remove_circle_black_24dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:tint="@color/icons" />
+
+            <ImageView android:id="@+id/setEditor_weightUp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_circle_black_24dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:tint="@color/icons" />
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="@dimen/content_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_body_1_material"
+                android:textColor="@color/primary_text"
+                android:text="@string/rest" />
+
+            <EditText android:id="@+id/setEditor_rest"
+                android:inputType="number"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/content_margin"/>
+
+            <ImageView android:id="@+id/setEditor_restDown"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_remove_circle_black_24dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:tint="@color/icons" />
+
+            <ImageView android:id="@+id/setEditor_restUp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_circle_black_24dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:tint="@color/icons" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp">
+
+        <ImageView android:id="@+id/setEditor_icNote"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_note_add_black_24dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:tint="@color/icons" />
+
+        <ImageView android:id="@+id/setEditor_icAdd"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_add_black_24dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:tint="@color/icons" />
+
+        <ImageView android:id="@+id/setEditor_icMore"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_more_vert_black_24dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:tint="@color/icons" />
+
+    </LinearLayout>
+
+</RelativeLayout>
